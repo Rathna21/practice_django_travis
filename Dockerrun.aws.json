@@ -1,0 +1,24 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "command": [
+                "python",
+                "manage.py",
+                "runserver",
+                "0.0.0.0:8000"
+            ],
+            "essential": true,
+            "image": "rathna21/django-eb-aws:latest",
+            "name": "web",
+            "portMappings": [
+                {
+                    "containerPort": 8000,
+                    "hostPort": 8000
+                }
+            ]
+        }
+    ],
+    "family": "",
+    "volumes": []
+}
